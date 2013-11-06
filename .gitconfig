@@ -1,0 +1,17 @@
+[user]
+	name = Dante Briones
+[include]
+	path = ~/.gitconfig.local
+[core]
+	editor = /usr/bin/emacs
+	autocrlf = input
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+[credential]
+	helper = osxkeychain
+[push]
+	default = tracking
+[branch]
+	autosetuprebase = always
