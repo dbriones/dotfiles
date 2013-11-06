@@ -5,6 +5,7 @@
 [core]
 	editor = /usr/bin/emacs
 	autocrlf = input
+	excludesfile = ~/.gitignore_global
 [alias]
 	ci = commit
 	st = status
