@@ -5,6 +5,7 @@ export PS2="\u@\h:\W=>"
 # Aliases
 alias fn='find . -name'
 alias ffs='sudo'
+alias ll='ls -l'
 
 # Bash Completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
