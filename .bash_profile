@@ -1,6 +1,12 @@
+# Prompts
 export PS1="\u@\h:\W>"
 export PS2="\u@\h:\W=>"
 
+# Aliases
+alias fn='find . -name'
+alias ffs='sudo'
+
+# Bash Completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
      . `brew --prefix`/etc/bash_completion
 fi
