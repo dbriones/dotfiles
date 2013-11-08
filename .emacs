@@ -10,6 +10,7 @@
 ; add to the load-path
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (add-to-list 'load-path "~/dev/github/dbriones/cucumber.el/")
+(add-to-list 'load-path "~/dev/github/dbriones/markdown-mode/")
 
 (autoload 'markdown-mode "markdown-mode.el" 
   "Major mode for editing Markdown files" t) 
