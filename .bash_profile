@@ -2,6 +2,8 @@
 export PS1="\u@\h:\W>"
 export PS2="\u@\h:\W=>"
 
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+
 # Aliases
 alias fn='find . -name'
 alias ffs='sudo'
