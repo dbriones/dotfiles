@@ -9,6 +9,12 @@ alias fn='find . -name'
 alias ffs='sudo'
 alias ll='ls -l'
 
+# Vagrant
+alias vu='vagrant up'
+alias vs='vagrant suspend'
+alias vh='vagrant halt'
+alias vr='vagrant reload'
+
 # Bash Completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
      . `brew --prefix`/etc/bash_completion
@@ -28,3 +34,5 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   export PS1='\[\033[01;32m\]\h\[\033[01;36m\] \W\[\033[01;33m\]$(__git_ps1)\[\033[00m\] $ '
 fi
 
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
