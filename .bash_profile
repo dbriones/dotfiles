@@ -1,3 +1,5 @@
+export EDITOR=/usr/bin/emacs
+
 # Prompts
 export PS1="\u@\h:\W>"
 export PS2="\u@\h:\W=>"
@@ -31,7 +33,7 @@ fi
 # brew update
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   . /usr/local/etc/bash_completion.d/git-completion.bash;
-  export PS1='\[\033[01;32m\]\h\[\033[01;36m\] \W\[\033[01;33m\]$(__git_ps1)\[\033[00m\] $ '
+  export PS1='\t \[\033[01;32m\]\h\[\033[01;36m\] \W\[\033[01;33m\]$(__git_ps1)\[\033[00m\] $ '
 fi
 
 # rbenv
