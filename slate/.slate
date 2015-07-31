@@ -116,7 +116,7 @@ bind a:${modifiers} focus ${slack}
 alias skype	    	'Skype'
 bind y:${modifiers} focus ${skype}
 
-alias terminal	    	'Terminal'
+alias terminal	    	'iTerm'
 bind t:${modifiers} focus ${terminal}
 
 alias intellij	    	'IntelliJ IDEA'
