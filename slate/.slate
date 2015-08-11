@@ -145,7 +145,7 @@ layout dev-dual		${skype}    	${e-50}		${internal}
 layout dev-dual		${slack}   	${e-50}		${internal}
 layout dev-dual		${chrome}   	${e-50}		${internal}
 layout dev-dual		${slack}   	${e-50}		${internal}
-layout dev-dual		${terminal} 	${se-60}	${external}
+layout dev-dual		${terminal} 	${e-50}		${external}
 
 bind 4:${modifiers} layout dev-dual
 
