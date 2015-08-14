@@ -4,6 +4,6 @@ Use GNU Stow:
 
 ```
 $ cd <this repo>
-$ stow -t ~ <package name>
+$ stow <package name>
 $ # there is no step 3!
 ```
