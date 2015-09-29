@@ -13,6 +13,22 @@ tm_connect () {
     shift
   done
 
-  # Evaluate the command
   eval ${cmd}
+}
+
+# Automatically replace the unresolvable hostname out of the tmate
+# connect string and replace with the IP address of the machine
+# designated in ~/.tmate.conf. Put the result onto the clipboard.
+tm_connect_string () {
+  # Extract the hostname/IP address from the tmate config file
+  ip=$(grep host ~/.tmate.conf | sed -E 's/.*"(.*)"/\1/')
+  cmd=""
+  while (( "$#" ))
+  do
+    # Substitute the address into the params supplied to this function
+    cmd=${cmd}' '$(echo $1 | sed -E "s/(.*@).*/\1${ip}/")
+    shift
+  done
+
+  printf "${cmd}" | pbcopy
 }
