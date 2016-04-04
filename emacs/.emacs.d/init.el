@@ -82,7 +82,8 @@
 ;; also want to enable paredit in the REPL buffer as well:
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
-
+(add-hook 'clojure-mode-hook (lambda ()
+			       (local-set-key (kbd "M-SPC") 'mark-sexp)))
 (install-package 'clojure-cheatsheet)
 (global-set-key (kbd "C-c s") 'clojure-cheatsheet)
 
