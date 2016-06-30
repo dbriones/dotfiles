@@ -137,14 +137,14 @@ alias external-res 2560x1440
 # Dual-Monitor development
 default dev-dual	resolutions:${external-res};${external-res};
 
-layout dev-dual		${editor}   	${w-50}		${external}
 layout dev-dual		${evernote}	${w-60}		${internal}
-layout dev-dual		${intellij} 	${e-50}		${external}
-layout dev-dual		${safari}   	${w-60}		${external}
 layout dev-dual		${skype}    	${e-50}		${internal}
 layout dev-dual		${slack}   	${e-50}		${internal}
 layout dev-dual		${chrome}   	${e-50}		${internal}
-layout dev-dual		${slack}   	${e-50}		${internal}
+
+layout dev-dual		${editor}   	${w-50}		${external}
+layout dev-dual		${intellij} 	${e-50}		${external}
+layout dev-dual		${safari}   	${w-60}		${external}
 layout dev-dual		${terminal} 	${e-50}		${external}
 
 bind 4:${modifiers} layout dev-dual
