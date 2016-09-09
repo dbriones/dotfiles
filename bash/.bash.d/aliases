@@ -76,4 +76,4 @@ ffs () { eval 'sudo $(history | tail -2 | head -1 | cut -c8-)'; }
 # Use EmacsForMacOSX instead of default emacs
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
-alias fix-camera='sudo killall VDCAssistant && sudo killall AppleCameraAssistant'
+alias fix-camera='sudo launchctl stop com.apple.cmio.VDCAssistant && sudo launchctl start com.apple.cmio.VDCAssistant && sudo launchctl stop com.apple.cmio.AppleCameraAssistant && sudo launchctl start com.apple.cmio.AppleCameraAssistant'
