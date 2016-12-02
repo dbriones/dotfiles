@@ -14,8 +14,11 @@ alias h="history"
 alias o="open"
 
 # Docker
-alias dm=docker-machine
 alias d=docker
+alias dpsa='docker ps -a'
+
+# Minikube
+alias mk=minikube
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
