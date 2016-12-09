@@ -24,7 +24,7 @@ fi
 
 prompt_simple() {
     unset PROMPT_COMMAND
-    PS1="\t [\u@\h:\w]\$ "
+    PS1="[\u@\h:\w]\$ "
     PS2="> "
 }
 
@@ -35,7 +35,7 @@ prompt_compact() {
 }
 
 prompt_color() {
-    PS1="${GREY}\t [${COLOR1}\u${GREY}@${COLOR2}\h${GREY}:${COLOR1}\W${GREY}]${COLOR2}$P${PS_CLEAR} "
+    PS1="[${COLOR1}\u${GREY}@${COLOR2}\h${GREY}:${COLOR1}\W${GREY}]${COLOR2}$P${PS_CLEAR} "
     PS2="\[;1m\]continue \[m\]> "
 }
 

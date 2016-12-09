@@ -1,10 +1,7 @@
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.bash.d/*; do
-	[ -r "$file" ] && source "$file"
-done
-for file in ~/.bash-user.d/*; do
+# Load only files with a `.bash` extension -- this prevents, for
+# example, Emacs temp files from being evaluated unexpectedly
+#
+for file in ~/.bash.d/*.bash ~/.bash-user.d/*.bash; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
