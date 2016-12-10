@@ -27,7 +27,7 @@ fi
 
 prompt_simple() {
     unset PROMPT_COMMAND
-    PS1="[\u@\h:\w]\$ "
+    PS1="[\u@\h:\w]${P} "
     PS2="> "
 }
 
@@ -57,8 +57,8 @@ prompt_color_git() {
   if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]
   then
     . /usr/local/etc/bash_completion.d/git-completion.bash;
-    PS1="${BOLD_GREEN}\h${BOLD_CYAN} \W${BOLD_YELLOW}\$(__git_ps1)${PS_CLEAR} $ "
-    PS2="${NORM_RED}continue ${PS_CLEAR}> "
+    PS1=" ${BOLD_GREEN}\h${BOLD_CYAN} \W${BOLD_YELLOW}\$(__git_ps1)${PS_CLEAR} ${P} "
+    PS2=" ${NORM_RED}continue ${PS_CLEAR}> "
   fi
 }
 
