@@ -3,7 +3,7 @@
 [include]
 	path = ~/.gitconfig.local
 [core]
-	editor = /usr/bin/emacs
+	editor = /usr/local/bin/emacs
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
 [alias]
