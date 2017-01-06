@@ -280,6 +280,12 @@ if the major mode is one of 'delete-trailing-whitespace-modes'"
       helm-ls-git-show-abs-or-relative 'relative)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Markdown mode
+(install-package 'markdown-mode)
+
+(setq markdown-indent-on-enter nil)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Shell script mode
 
 (defun setup-sh-mode ()
