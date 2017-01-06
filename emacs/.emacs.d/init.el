@@ -298,7 +298,6 @@ if the major mode is one of 'delete-trailing-whitespace-modes'"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ## Misc modes
 
-(install-package 'markdown-mode)
 (install-package 'yaml-mode)
 (install-package 'web-mode)
 (install-package 'protobuf-mode)
