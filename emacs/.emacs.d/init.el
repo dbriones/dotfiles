@@ -279,6 +279,16 @@ if the major mode is one of 'delete-trailing-whitespace-modes'"
 (setq helm-ff-transformer-show-only-basename nil
       helm-ls-git-show-abs-or-relative 'relative)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Shell script mode
+
+(defun setup-sh-mode ()
+  "Set sh-mode to use 2 spaces for indentation"
+  (interactive)
+  (setq sh-basic-offset 2
+	sh-indentation 2))
+(add-hook 'sh-mode-hook 'setup-sh-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ## Misc modes
 
