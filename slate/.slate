@@ -16,6 +16,7 @@ config windowHintsIgnoreHiddenWindows	false
 
 # The modifier keys
 alias modifiers ctrl;alt;cmd
+alias modifiers- ctrl;alt;cmd;shift
 
 # Monitor Aliases
 alias monitor-macbook-pro        0
@@ -53,11 +54,17 @@ bind ,:${modifiers} ${rightbottom}
 bind ]:${modifiers} throw right resize full
 bind [:${modifiers}  throw left resize full
 
-# Resize
-bind right:${modifiers} resize +10% +0
-bind left:${modifiers}  resize -10% +0
-bind up:${modifiers}    resize +0   -10%
-bind down:${modifiers}  resize +0   +10%
+# Grow
+bind right:${modifiers}  resize +5% 0
+bind left:${modifiers}   sequence nudge -5% +0 | resize +5% +0
+bind up:${modifiers}     sequence nudge +0 -5% | resize +0 +5%
+bind down:${modifiers}  resize +0   +5%
+
+# Shrink
+bind right:${modifiers-} resize -5% +0
+bind left:${modifiers-}  sequence nudge +5% +0 | resize -5% +0
+bind up:${modifiers-}    sequence nudge +0 +5% | resize +0 -5%
+bind down:${modifiers-}  resize +0   -5%
 
 # Concrete positions
 alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${monitor-macbook-pro}
