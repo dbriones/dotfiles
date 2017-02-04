@@ -77,3 +77,5 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 ffs () { eval 'sudo $(history | tail -2 | head -1 | cut -c8-)'; }
 
 alias fix-camera='sudo launchctl stop com.apple.cmio.VDCAssistant && sudo launchctl start com.apple.cmio.VDCAssistant && sudo launchctl stop com.apple.cmio.AppleCameraAssistant && sudo launchctl start com.apple.cmio.AppleCameraAssistant'
+
+alias wifi='sudo ifconfig en0 down && sleep 2 && sudo ifconfig en0 up'
