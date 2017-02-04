@@ -62,4 +62,8 @@ prompt_color_git() {
   fi
 }
 
-prompt_color_git
+if [[ -z $INSIDE_EMACS ]]; then
+  prompt_color_git
+else
+  prompt_simple
+fi
