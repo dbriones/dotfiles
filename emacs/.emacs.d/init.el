@@ -279,6 +279,12 @@ if the major mode is one of 'delete-trailing-whitespace-modes'"
 (setq helm-ff-transformer-show-only-basename nil
       helm-ls-git-show-abs-or-relative 'relative)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Git link
+(install-package 'git-link)
+
+(global-set-key (kbd "C-c C-g") 'git-link)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Markdown mode
 (install-package 'markdown-mode)
