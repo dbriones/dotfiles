@@ -45,9 +45,6 @@
 (install-package 'cider)
 (show-paren-mode 1)
 
-;; Enable eldoc in Clojure buffers:
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-
 ;; To store the REPL history in a file:
 (setq cider-repl-history-file "~/.emacs.d/.repl-history")
 
