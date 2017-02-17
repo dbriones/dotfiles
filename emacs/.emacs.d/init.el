@@ -1,3 +1,6 @@
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
 (load (expand-file-name "~/.emacs.d/user/wm.el"))
 
 (require 'package)
