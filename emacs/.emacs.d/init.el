@@ -1,3 +1,5 @@
+(load (expand-file-name "~/.emacs.d/user/wm.el"))
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
@@ -31,31 +33,7 @@
 (setq inhibit-startup-screen t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(setq ereceipts-home-dir "~/workspace/eReceipts-services")
 (setq default-directory "~/")
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ## Grep
-
-(require 'grep)
-
-(defun ereceipts-read-regexp ()
-  "Read regexp arg for interactive grep."
-  ;; Need to call grep-compute-defaults due to a bug where rgrep
-  ;; doesn't work when called programatically
-  (grep-compute-defaults)
-  (let ((default (grep-tag-default)))
-    (read-string
-     (concat "Search for"
-	     (if (and default (> (length default) 0))
-		 (format " (default \"%s\"): " default) ": "))
-     default 'grep-regexp-history)))
-
-(defun ereceipts-clj-grep (regexp)
-  "Searches for the regexp in all clojure files under the eReceipts-services directory"
-  (interactive
-   (list (ereceipts-read-regexp)))
-  (rgrep regexp "*.clj" ereceipts-home-dir))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ## Clojure
