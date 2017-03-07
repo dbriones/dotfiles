@@ -17,8 +17,9 @@ alias o="open"
 alias d=docker
 alias dpsa='docker ps -a'
 
-# Minikube
+# Kubernetes
 alias mk=minikube
+alias kc=kubectl
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
