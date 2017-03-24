@@ -40,16 +40,6 @@ alias leftless      move screenOriginX;screenOriginY                  screenSize
 alias lefttop    move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY/2
 alias leftbottom    move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
 
-
-# Location bindings
-bind j:${modifiers} ${lefthalf}
-bind k:${modifiers} ${full}
-bind l:${modifiers} ${righthalf}
-bind i:${modifiers} ${lefttop}
-bind m:${modifiers} ${leftbottom}
-bind o:${modifiers} ${righttop}
-bind ,:${modifiers} ${rightbottom}
-
 # Throw
 bind ]:${modifiers} throw right resize full
 bind [:${modifiers}  throw left resize full
@@ -100,13 +90,27 @@ alias e-60	${rightmost}
 alias w-50	${lefthalf}
 alias w-60	${leftmost}
 
+alias nw-50     ${lefttop}
+alias n-50      move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias ne-50     ${righttop}
+
+alias sw-50     ${leftbottom}
 # Bump up 20px from bottom to account for Terminal's tab bar
-alias s-50	move screenOriginX;screenOriginY+screenSizeY*0.5-15			screenSizeX;screenSizeY*0.5
+alias s-50	move screenOriginX;screenOriginY+screenSizeY/2			screenSizeX;screenSizeY/2
+alias se-50     ${rightbottom}
 
+# Location bindings
+bind u:${modifiers} ${nw-50}
+bind i:${modifiers} ${n-50}
+bind o:${modifiers} ${ne-50}
 
-bind u:${modifiers} ${nw-85}
-bind p:${modifiers} ${se-85}
-bind .:${modifiers} ${s-50}
+bind j:${modifiers} ${w-50}
+bind k:${modifiers} ${full}
+bind l:${modifiers} ${e-50}
+
+bind m:${modifiers} ${sw-50}
+bind ,:${modifiers} ${s-50}
+bind .:${modifiers} ${se-50}
 
 alias calendar		'Calendar'
 bind c:${modifiers} focus ${calendar}
