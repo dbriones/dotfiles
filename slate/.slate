@@ -61,10 +61,10 @@ bind up:${modifiers}     sequence nudge +0 -5% | resize +0 +5%
 bind down:${modifiers}  resize +0   +5%
 
 # Shrink
-bind right:${modifiers-} resize -5% +0
-bind left:${modifiers-}  sequence nudge +5% +0 | resize -5% +0
-bind up:${modifiers-}    sequence nudge +0 +5% | resize +0 -5%
-bind down:${modifiers-}  resize +0   -5%
+bind right:${modifiers-} sequence nudge +5% +0 | resize -5% +0
+bind left:${modifiers-}  resize -5% +0
+bind up:${modifiers-}    resize +0 -5%
+bind down:${modifiers-}  sequence nudge +0 +5% | resize +0 -5%
 
 # Concrete positions
 alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${monitor-macbook-pro}
