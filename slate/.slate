@@ -22,9 +22,6 @@ alias modifiers- ctrl;alt;cmd;shift
 alias monitor-macbook-pro        0
 alias monitor-cinema-display     1
 
-alias editor         'Emacs'
-bind e:${modifiers} focus ${editor}
-
 # Screen positions, relative to current screen
 alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
 alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
@@ -114,6 +111,9 @@ bind .:${modifiers} ${se-50}
 
 alias calendar		'Calendar'
 bind c:${modifiers} focus ${calendar}
+
+alias editor            'Emacs'
+bind e:${modifiers} focus ${editor}
 
 alias evernote	    	'Evernote'
 bind v:${modifiers} focus ${evernote}
