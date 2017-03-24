@@ -43,6 +43,7 @@
 
 (install-package 'paredit)
 (install-package 'cider)
+(install-package 'clj-refactor)
 (show-paren-mode 1)
 
 ;; To store the REPL history in a file:
@@ -61,7 +62,10 @@
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (add-hook 'cider-repl-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook (lambda ()
-			       (local-set-key (kbd "M-SPC") 'mark-sexp)))
+			       (local-set-key (kbd "M-SPC") 'mark-sexp)
+			       (clj-refactor-mode 1)
+			       (yas-minor-mode 1)
+			       (cljr-add-keybindings-with-prefix "C-c C-m")))
 (install-package 'clojure-cheatsheet)
 (global-set-key (kbd "C-c s") 'clojure-cheatsheet)
 
