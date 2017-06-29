@@ -133,41 +133,34 @@ bind t:${modifiers} focus ${terminal}
 alias intellij	    	'IntelliJ IDEA'
 bind n:${modifiers} focus ${intellij}
 
+alias itunes	    'iTunes'
+bind 3:${modifiers} focus ${itunes}
+
 alias mail              'Mail'
 bind h:${modifiers} focus ${mail}
 
 alias chrome            'Chrome'
 bind r:${modifiers} focus ${chrome}
 
-alias internal 0
-alias external 1
-
 alias internal-res 1680x1050
-alias external-res 2560x1440
+alias thunderbolt-res 2560x1440
 
-# Dual-Monitor development
-default dev-dual	resolutions:${external-res};${external-res};
+# standard layout for all apps on a 2560x1440 screen (or equiv)
+default wqhd resolutions:${thunderbolt-res}
 
-layout dev-dual		${evernote}	${w-60}		${internal}
-layout dev-dual		${skype}    	${e-50}		${internal}
-layout dev-dual		${slack}   	${e-50}		${internal}
-layout dev-dual		${chrome}   	${e-50}		${internal}
+layout wqhd		${editor}   	${w-50}
+layout wqhd		${evernote}	${w-50}
+layout wqhd		${intellij} 	${w-50}
+layout wqhd		${mail}		${w-50}
 
-layout dev-dual		${editor}   	${w-50}		${external}
-layout dev-dual		${intellij} 	${e-50}		${external}
-layout dev-dual		${safari}   	${w-60}		${external}
-layout dev-dual		${terminal} 	${e-50}		${external}
+layout wqhd		${chrome}   	${e-50}
+layout wqhd		${slack}   	${e-50}
+layout wqhd		${safari}   	${e-50}
+layout wqhd		${terminal} 	${e-50}
+#layout dev		${skype}    	${e-50}
 
-bind 4:${modifiers} layout dev-dual
-
-# Dual-Monitor non-development
-default nondev-dual	resolutions:${external-res};${external-res}
-
-layout nondev-dual	${mail}		${w-60}		${external}
-layout nondev-dual	${safari}	${e-50} 	${external}
-layout nondev-dual	${calendar}	${full}		${internal}
-
-bind 3:${modifiers} 	layout		nondev-dual
+layout wqhd		${calendar}	${full}
+layout wqhd		${itunes}	${full}
 
 # Internal-only development
 default internal-dev	resolutions:${internal-res}
@@ -180,6 +173,5 @@ layout internal-dev	${skype}    	${e-50}
 layout internal-dev	${slack}   	${e-50}
 layout internal-dev	${terminal} 	${s-50}
 
-bind 5:${modifiers}	layout		internal-dev
-
 bind 0:${modifiers}	relaunch
+bind 1:${modifiers}	layout		wqhd
