@@ -18,25 +18,6 @@ config windowHintsIgnoreHiddenWindows	false
 alias modifiers ctrl;alt;cmd
 alias modifiers- ctrl;alt;cmd;shift
 
-# Monitor Aliases
-alias monitor-macbook-pro        0
-alias monitor-cinema-display     1
-
-# Screen positions, relative to current screen
-alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
-alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
-alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
-
-alias rightmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSizeX*0.6;screenSizeY
-alias rightless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
-alias righttop	    move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY/2
-alias rightbottom   move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
-
-alias leftmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
-alias leftless      move screenOriginX;screenOriginY                  screenSizeX*0.4;screenSizeY
-alias lefttop    move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY/2
-alias leftbottom    move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
-
 # Throw
 bind ]:${modifiers} throw right resize full
 bind [:${modifiers}  throw left resize full
@@ -53,52 +34,44 @@ bind left:${modifiers-}  resize -5% +0
 bind up:${modifiers-}    resize +0 -5%
 bind down:${modifiers-}  sequence nudge +0 +5% | resize +0 -5%
 
-# Concrete positions
-alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${monitor-macbook-pro}
-alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${monitor-macbook-pro}
-alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${monitor-macbook-pro}
-
-alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${monitor-cinema-display}
-alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${monitor-cinema-display}
-alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${monitor-cinema-display}
-alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${monitor-cinema-display}
-
 #####################
 ##     LAYOUTS     ##
 #####################
 
-# Screen specific positions
-alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY			${monitor-macbook-pro}
-alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY			${monitor-macbook-pro}
-alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY	${monitor-macbook-pro}
-
-alias 2-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY			${monitor-cinema-display}
-alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY			${monitor-cinema-display}
-alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY	${monitor-cinema-display}
+##############################################
+# Window positions, relative to current screen
+##############################################
 
 # Use compass rose for directions (n,s,e,w)
 # Use percentage of screen (width|height) for size
 
-alias nw-85	move screenOriginX;screenOriginY					screenSizeX*0.85;screenSizeY*0.85
-alias se-85	move screenOriginX+screenSizeX*0.15;screenOriginY+screenSizeY*0.15	screenSizeX*0.85;screenSizeY*0.85
-alias se-60	move screenOriginX+screenSizeX*0.4;screenOriginY+screenSizeY/2		screenSizeX*0.6;screenSizeY/2
-alias e-50	${righthalf}
-alias e-60	${rightmost}
-alias w-50	${lefthalf}
-alias w-60	${leftmost}
+alias sz-x	screenSizeX
+alias sz-y	screenSizeY
 
-alias nw-50     ${lefttop}
-alias n-50      move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
-alias n-33	move screenOriginX+screenSizeX*0.33;screenOriginY			screenSizeX*.33;screenSizeY*0.33
-alias ne-50     ${righttop}
+alias so-x	screenOriginX
+alias so-y	screenOriginY
 
-alias sw-50     ${leftbottom}
-alias sw-66	move screenOriginX;screenOriginY+screenSizeY*.33	screenSizeX*0.5;screenSizeY*.66
+alias full	move ${so-x};${so-y}				${sz-x};${sz-y}
+alias nw-85	move ${so-x};${so-y}				${sz-x}*.85;${sz-y}*.85
+alias se-85	move ${so-x}+${sz-x}*.15;${so-y}+${sz-y}*.15	${sz-x}*.85;${sz-y}*.85
+alias se-60	move ${so-x}+${sz-x}*.4;${so-y}+${sz-y}*.5	${sz-x}*.6;${sz-y}*.5
+alias e-50	move ${so-x}+${sz-x}*.5;${so-y}    		${sz-x}*.5;${sz-y}
+alias e-60	move ${so-x}+${sz-x}*.4;${so-y}  		${sz-x}*.6;${sz-y}
+alias w-50	move ${so-x};${so-y}                  		${sz-x}*.5;${sz-y}
+alias w-60	move ${so-x};${so-y}                  		${sz-x}*.6;${sz-y}
+
+alias nw-50     move ${so-x};${so-y}                  		${sz-x}*.5;${sz-y}*.5
+alias n-50      move ${so-x};${so-y}				${sz-x};${sz-y}*.5
+alias n-33	move ${so-x}+${sz-x}*.33;${so-y}		${sz-x}*.33;${sz-y}*.33
+alias ne-50     move ${so-x}+${sz-x}*.5;${so-y}    		${sz-x}*.5;${sz-y}*.5
+
+alias sw-50     move ${so-x};${so-y}+${sz-y}*.5    		${sz-x}*.5;${sz-y}*.5
+alias sw-66	move ${so-x};${so-y}+${sz-y}*.33		${sz-x}*.5;${sz-y}*.66
 # Bump up 20px from bottom to account for Terminal's tab bar
-alias s-50	move screenOriginX;screenOriginY+screenSizeY/2			screenSizeX;screenSizeY/2
+alias s-50	move ${so-x};${so-y}+${sz-y}*.5			${sz-x};${sz-y}*.5
 
-alias se-50     ${rightbottom}
-alias se-66	move screenOriginX+screenSizeX*0.5;screenOriginY+screenSizeY*.33	screenSizeX*0.5;screenSizeY*.66
+alias se-50     move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.5    	${sz-x}*.5;${sz-y}*.5
+alias se-66	move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.33	${sz-x}*.5;${sz-y}*.66
 
 # Location bindings
 bind u:${modifiers} ${nw-50}
@@ -154,19 +127,19 @@ alias thunderbolt-res 2560x1440
 # standard layout for all apps on a 2560x1440 screen (or equiv)
 default wqhd resolutions:${thunderbolt-res}
 
-layout wqhd		${editor}   	${w-50}
-layout wqhd		${evernote}	${w-50}
-layout wqhd		${intellij} 	${w-50}
-layout wqhd		${mail}		${w-50}
+layout wqhd		${editor}		${w-50}
+layout wqhd		${evernote}		${w-50}
+layout wqhd		${intellij} 		${w-50}
+layout wqhd		${mail}			${w-50}
 
-layout wqhd		${chrome}   	${e-50}
-layout wqhd		${slack}   	${e-50}
-layout wqhd		${safari}   	${e-50}
-layout wqhd		${terminal} 	${e-50}
-#layout dev		${skype}    	${e-50}
+layout wqhd		${chrome}:REPEAT_LAST	${e-50}
+layout wqhd		${slack}   		${e-50}
+layout wqhd		${safari}:REPEAT_LAST	${e-50}
+layout wqhd		${terminal} 		${e-50}
+#layout dev		${skype}    		${e-50}
 
-layout wqhd		${calendar}	${full}
-layout wqhd		${itunes}	${full}
+layout wqhd		${calendar}		${full}
+layout wqhd		${itunes}		${full}
 
 # wqhd layout for videoconferencing
 layout wqhd-vc		${zoom}			${n-33}
@@ -176,7 +149,7 @@ layout wqhd-vc		${evernote}		${sw-66}
 layout wqhd-vc		${intellij} 		${sw-66}
 layout wqhd-vc		${mail}			${sw-66}
 
-layout wqhd-vc		${chrome}   		${se-66}
+layout wqhd-vc		${chrome}:REPEAT_LAST	${se-66}
 layout wqhd-vc		${slack}   		${se-66}
 layout wqhd-vc		${safari}:REPEAT_LAST  	${se-66}
 layout wqhd-vc		${terminal} 		${se-66}
