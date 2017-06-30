@@ -89,12 +89,16 @@ alias w-60	${leftmost}
 
 alias nw-50     ${lefttop}
 alias n-50      move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias n-33	move screenOriginX+screenSizeX*0.33;screenOriginY			screenSizeX*.33;screenSizeY*0.33
 alias ne-50     ${righttop}
 
 alias sw-50     ${leftbottom}
+alias sw-66	move screenOriginX;screenOriginY+screenSizeY*.33	screenSizeX*0.5;screenSizeY*.66
 # Bump up 20px from bottom to account for Terminal's tab bar
 alias s-50	move screenOriginX;screenOriginY+screenSizeY/2			screenSizeX;screenSizeY/2
+
 alias se-50     ${rightbottom}
+alias se-66	move screenOriginX+screenSizeX*0.5;screenOriginY+screenSizeY*.33	screenSizeX*0.5;screenSizeY*.66
 
 # Location bindings
 bind u:${modifiers} ${nw-50}
@@ -142,6 +146,8 @@ bind h:${modifiers} focus ${mail}
 alias chrome            'Chrome'
 bind r:${modifiers} focus ${chrome}
 
+alias zoom	    	  'zoom.us'
+
 alias internal-res 1680x1050
 alias thunderbolt-res 2560x1440
 
@@ -162,6 +168,21 @@ layout wqhd		${terminal} 	${e-50}
 layout wqhd		${calendar}	${full}
 layout wqhd		${itunes}	${full}
 
+# wqhd layout for videoconferencing
+layout wqhd-vc		${zoom}			${n-33}
+
+layout wqhd-vc		${editor}   		${sw-66}
+layout wqhd-vc		${evernote}		${sw-66}
+layout wqhd-vc		${intellij} 		${sw-66}
+layout wqhd-vc		${mail}			${sw-66}
+
+layout wqhd-vc		${chrome}   		${se-66}
+layout wqhd-vc		${slack}   		${se-66}
+layout wqhd-vc		${safari}:REPEAT_LAST  	${se-66}
+layout wqhd-vc		${terminal} 		${se-66}
+#layout wqhd-vc		${skype}    		${se-66}
+
+
 # Internal-only development
 default internal-dev	resolutions:${internal-res}
 
@@ -175,3 +196,4 @@ layout internal-dev	${terminal} 	${s-50}
 
 bind 0:${modifiers}	relaunch
 bind 1:${modifiers}	layout		wqhd
+bind 2:${modifiers}	layout		wqhd-vc
