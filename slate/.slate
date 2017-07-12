@@ -111,7 +111,7 @@ alias intellij	    	'IntelliJ IDEA'
 bind n:${modifiers} focus ${intellij}
 
 alias itunes	    'iTunes'
-bind 3:${modifiers} focus ${itunes}
+bind 9:${modifiers} focus ${itunes}
 
 alias mail              'Mail'
 bind h:${modifiers} focus ${mail}
@@ -121,52 +121,60 @@ bind r:${modifiers} focus ${chrome}
 
 alias zoom	    	  'zoom.us'
 
-alias internal-res 1680x1050
-alias thunderbolt-res 2560x1440
+# (equivalent) resolutions
+alias wsxga 1680x1050
+alias wqhd 2560x1440
 
 # standard layout for all apps on a 2560x1440 screen (or equiv)
-default wqhd resolutions:${thunderbolt-res}
+default thunderbolt resolutions:${wqhd}
 
-layout wqhd		${editor}		${w-50}
-layout wqhd		${evernote}		${w-50}
-layout wqhd		${intellij} 		${w-50}
-layout wqhd		${mail}			${w-50}
+layout thunderbolt		${editor}		${w-50}
+layout thunderbolt		${evernote}		${w-50}
+layout thunderbolt		${intellij} 		${w-50}
+layout thunderbolt		${mail}			${w-50}
 
-layout wqhd		${chrome}:REPEAT_LAST	${e-50}
-layout wqhd		${slack}   		${e-50}
-layout wqhd		${safari}:REPEAT_LAST	${e-50}
-layout wqhd		${terminal} 		${e-50}
-#layout dev		${skype}    		${e-50}
+layout thunderbolt		${chrome}:REPEAT_LAST	${e-50}
+layout thunderbolt		${slack}   		${e-50}
+layout thunderbolt		${safari}:REPEAT_LAST	${e-50}
+layout thunderbolt		${terminal} 		${e-50}
+#layout thunderbolt		${skype}    		${e-50}
 
-layout wqhd		${calendar}		${full}
-layout wqhd		${itunes}		${full}
+layout thunderbolt		${calendar}		${full}
+layout thunderbolt		${itunes}		${full}
 
-# wqhd layout for videoconferencing
-layout wqhd-vc		${zoom}			${n-33}
+# thunderbolt layout for videoconferencing
+layout thunderbolt-vc		${zoom}			${n-33}
 
-layout wqhd-vc		${editor}   		${sw-66}
-layout wqhd-vc		${evernote}		${sw-66}
-layout wqhd-vc		${intellij} 		${sw-66}
-layout wqhd-vc		${mail}			${sw-66}
+layout thunderbolt-vc		${editor}   		${sw-66}
+layout thunderbolt-vc		${evernote}		${sw-66}
+layout thunderbolt-vc		${intellij} 		${sw-66}
+layout thunderbolt-vc		${mail}			${sw-66}
 
-layout wqhd-vc		${chrome}:REPEAT_LAST	${se-66}
-layout wqhd-vc		${slack}   		${se-66}
-layout wqhd-vc		${safari}:REPEAT_LAST  	${se-66}
-layout wqhd-vc		${terminal} 		${se-66}
-#layout wqhd-vc		${skype}    		${se-66}
+layout thunderbolt-vc		${chrome}:REPEAT_LAST	${se-66}
+layout thunderbolt-vc		${slack}   		${se-66}
+layout thunderbolt-vc		${safari}:REPEAT_LAST  	${se-66}
+layout thunderbolt-vc		${terminal} 		${se-66}
+#layout thunderbolt-vc		${skype}    		${se-66}
 
 
-# Internal-only development
-default internal-dev	resolutions:${internal-res}
+# standard layout for all apps on a 1680x1050 screen (or equiv)
+default internal	resolutions:${wsxga}
 
-layout internal-dev	${editor}	${e-60}
-layout internal-dev	${evernote}	${w-60}
-layout internal-dev	${intellij} 	${e-60}
-layout internal-dev	${safari}   	${w-60}
-layout internal-dev	${skype}    	${e-50}
-layout internal-dev	${slack}   	${e-50}
-layout internal-dev	${terminal} 	${s-50}
+layout internal		${editor}		${w-60}
+layout internal		${evernote}		${w-60}
+layout internal		${intellij} 		${w-60}
+layout internal		${mail}			${w-60}
+
+layout internal		${chrome}:REPEAT_LAST	${e-60}
+layout internal		${slack}   		${e-60}
+layout internal		${safari}:REPEAT_LAST	${e-60}
+layout internal		${terminal} 		${e-60}
+#layout internal		${skype}    		${e-60}
+
+layout internal		${calendar}		${full}
+layout internal		${itunes}		${full}
 
 bind 0:${modifiers}	relaunch
-bind 1:${modifiers}	layout		wqhd
-bind 2:${modifiers}	layout		wqhd-vc
+bind 1:${modifiers}	layout		thunderbolt
+bind 2:${modifiers}	layout		thunderbolt-vc
+bind 3:${modifiers}	layout		internal
