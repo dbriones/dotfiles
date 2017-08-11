@@ -61,7 +61,7 @@ alias w-50	move ${so-x};${so-y}                  		${sz-x}*.5;${sz-y}
 alias w-60	move ${so-x};${so-y}                  		${sz-x}*.6;${sz-y}
 
 alias nw-50     move ${so-x};${so-y}                  		${sz-x}*.5;${sz-y}*.5
-alias n-50      move ${so-x}+${sz-x}*.25;${so-y}		${sz-x}*.5;${sz-y}*.33
+alias n-66      move ${so-x}+${sz-x}*.16;${so-y}		${sz-x}*.66;${sz-y}*.33
 alias n-33	move ${so-x}+${sz-x}*.33;${so-y}		${sz-x}*.33;${sz-y}*.33
 alias ne-50     move ${so-x}+${sz-x}*.5;${so-y}    		${sz-x}*.5;${sz-y}*.5
 
@@ -75,7 +75,7 @@ alias se-66	move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.33	${sz-x}*.5;${sz-y}*.66
 
 # Location bindings
 bind u:${modifiers} ${nw-50}
-bind i:${modifiers} ${n-50}
+bind i:${modifiers} ${n-66}
 bind o:${modifiers} ${ne-50}
 
 bind j:${modifiers} ${w-50}
@@ -143,7 +143,7 @@ layout thunderbolt		${calendar}		${full}
 layout thunderbolt		${itunes}		${full}
 
 # thunderbolt layout for videoconferencing
-layout thunderbolt-vc		${zoom}			${n-50}
+layout thunderbolt-vc		${zoom}			${n-66}
 
 layout thunderbolt-vc		${editor}   		${sw-66}
 layout thunderbolt-vc		${evernote}		${sw-66}
