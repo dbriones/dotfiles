@@ -136,7 +136,7 @@ layout thunderbolt		${mail}			${w-50}
 layout thunderbolt		${chrome}:REPEAT_LAST	${e-50}
 layout thunderbolt		${slack}   		${e-50}
 layout thunderbolt		${safari}:REPEAT_LAST	${e-50}
-layout thunderbolt		${terminal} 		${e-50}
+layout thunderbolt		${terminal}:REPEAT_LAST	${e-50}
 #layout thunderbolt		${skype}    		${e-50}
 
 layout thunderbolt		${calendar}		${full}
@@ -153,7 +153,7 @@ layout thunderbolt-vc		${mail}			${sw-66}
 layout thunderbolt-vc		${chrome}:REPEAT_LAST	${se-66}
 layout thunderbolt-vc		${slack}   		${se-66}
 layout thunderbolt-vc		${safari}:REPEAT_LAST  	${se-66}
-layout thunderbolt-vc		${terminal} 		${se-66}
+layout thunderbolt-vc		${terminal}:REPEAT_LAST	${se-66}
 #layout thunderbolt-vc		${skype}    		${se-66}
 
 
@@ -168,7 +168,7 @@ layout internal		${mail}			${w-60}
 layout internal		${chrome}:REPEAT_LAST	${e-60}
 layout internal		${slack}   		${e-60}
 layout internal		${safari}:REPEAT_LAST	${e-60}
-layout internal		${terminal} 		${e-60}
+layout internal		${terminal}:REPEAT_LAST	${e-60}
 #layout internal		${skype}    		${e-60}
 
 layout internal		${calendar}		${full}
