@@ -75,7 +75,7 @@ alias se-66	move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.33	${sz-x}*.5;${sz-y}*.66
 
 # Location bindings
 bind u:${modifiers} ${nw-50}
-bind i:${modifiers} ${n-66}
+bind i:${modifiers} ${n-33}
 bind o:${modifiers} ${ne-50}
 
 bind j:${modifiers} ${w-50}
