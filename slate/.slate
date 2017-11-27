@@ -62,7 +62,7 @@ alias w-60	move ${so-x};${so-y}                  		${sz-x}*.6;${sz-y}
 
 alias nw-50     move ${so-x};${so-y}                  		${sz-x}*.5;${sz-y}*.5
 alias n-66      move ${so-x}+${sz-x}*.16;${so-y}		${sz-x}*.66;${sz-y}*.33
-alias n-33	move ${so-x}+${sz-x}*.33;${so-y}		${sz-x}*.33;${sz-y}*.33
+alias n-33	move ${so-x}+${sz-x}*.33;${so-y}		${sz-x}*.33;${sz-y}*.5
 alias ne-50     move ${so-x}+${sz-x}*.5;${so-y}    		${sz-x}*.5;${sz-y}*.5
 
 alias sw-50     move ${so-x};${so-y}+${sz-y}*.5    		${sz-x}*.5;${sz-y}*.5
