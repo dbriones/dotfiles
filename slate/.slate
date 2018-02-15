@@ -53,8 +53,7 @@ alias so-y	screenOriginY
 
 alias full	move ${so-x};${so-y}				${sz-x};${sz-y}
 alias nw-85	move ${so-x};${so-y}				${sz-x}*.85;${sz-y}*.85
-alias se-85	move ${so-x}+${sz-x}*.15;${so-y}+${sz-y}*.15	${sz-x}*.85;${sz-y}*.85
-alias se-60	move ${so-x}+${sz-x}*.4;${so-y}+${sz-y}*.5	${sz-x}*.6;${sz-y}*.5
+
 alias e-50	move ${so-x}+${sz-x}*.5;${so-y}    		${sz-x}*.5;${sz-y}
 alias e-60	move ${so-x}+${sz-x}*.4;${so-y}  		${sz-x}*.6;${sz-y}
 alias w-50	move ${so-x};${so-y}                  		${sz-x}*.5;${sz-y}
@@ -63,15 +62,20 @@ alias w-60	move ${so-x};${so-y}                  		${sz-x}*.6;${sz-y}
 alias nw-50     move ${so-x};${so-y}                  		${sz-x}*.5;${sz-y}*.5
 alias n-66      move ${so-x}+${sz-x}*.16;${so-y}		${sz-x}*.66;${sz-y}*.33
 alias n-33	move ${so-x}+${sz-x}*.33;${so-y}		${sz-x}*.33;${sz-y}*.5
+
 alias ne-50     move ${so-x}+${sz-x}*.5;${so-y}    		${sz-x}*.5;${sz-y}*.5
+alias ne-66 move ${so-x}+${sz-x}*.5;${so-y}           ${sz-x}*.5;${sz-y}*.66
 
 alias sw-50     move ${so-x};${so-y}+${sz-y}*.5    		${sz-x}*.5;${sz-y}*.5
 alias sw-66	move ${so-x};${so-y}+${sz-y}*.33		${sz-x}*.5;${sz-y}*.66
 # Bump up 20px from bottom to account for Terminal's tab bar
 alias s-50	move ${so-x};${so-y}+${sz-y}*.5			${sz-x};${sz-y}*.5
 
+alias se-33 move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.66   ${sz-x}*.5;${sz-y}*.33
 alias se-50     move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.5    	${sz-x}*.5;${sz-y}*.5
+alias se-60	move ${so-x}+${sz-x}*.4;${so-y}+${sz-y}*.5	${sz-x}*.6;${sz-y}*.5
 alias se-66	move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.33	${sz-x}*.5;${sz-y}*.66
+alias se-85	move ${so-x}+${sz-x}*.15;${so-y}+${sz-y}*.15	${sz-x}*.85;${sz-y}*.85
 
 # Location bindings
 bind u:${modifiers} ${nw-50}
@@ -111,7 +115,6 @@ alias intellij	    	'IntelliJ IDEA'
 bind n:${modifiers} focus ${intellij}
 
 alias itunes	    'iTunes'
-bind 9:${modifiers} focus ${itunes}
 
 alias mail              'Mail'
 bind h:${modifiers} focus ${mail}
@@ -156,6 +159,11 @@ layout thunderbolt-vc		${safari}:REPEAT_LAST  	${se-66}
 layout thunderbolt-vc		${terminal}:REPEAT_LAST	${se-66}
 #layout thunderbolt-vc		${skype}    		${se-66}
 
+# dev layout
+
+layout dev ${editor}   ${w-50}
+layout dev ${safari}   ${ne-66}
+layout dev ${terminal} ${se-33}
 
 # standard layout for all apps on a 1680x1050 screen (or equiv)
 default internal	resolutions:${wsxga}
@@ -178,3 +186,5 @@ bind 0:${modifiers}	relaunch
 bind 1:${modifiers}	layout		thunderbolt
 bind 2:${modifiers}	layout		thunderbolt-vc
 bind 3:${modifiers}	layout		internal
+
+bind 9:${modifiers} layout    dev
