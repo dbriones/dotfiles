@@ -93,7 +93,7 @@ bind .:${modifiers} ${se-50}
 alias calendar		'Calendar'
 bind c:${modifiers} focus ${calendar}
 
-alias editor            'Emacs'
+alias editor            'Atom'
 bind e:${modifiers} focus ${editor}
 
 alias evernote	    	'Evernote'
