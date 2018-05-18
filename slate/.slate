@@ -119,7 +119,7 @@ alias itunes	    'iTunes'
 alias mail              'Mail'
 bind h:${modifiers} focus ${mail}
 
-alias chrome            'Chrome'
+alias chrome            'Google Chrome'
 bind r:${modifiers} focus ${chrome}
 
 alias zoom	    	  'zoom.us'
@@ -161,9 +161,10 @@ layout thunderbolt-vc		${terminal}:REPEAT_LAST	${se-66}
 
 # dev layout
 
-layout dev ${editor}   ${w-50}
-layout dev ${safari}   ${ne-66}
-layout dev ${terminal} ${se-33}
+layout dev  ${editor}             ${w-50}
+layout dev  ${safari}             ${ne-66}
+layout dev  ${terminal}           ${se-33}
+layout dev  ${chrome}:REPEAT_LAST	${ne-66}
 
 # standard layout for all apps on a 1680x1050 screen (or equiv)
 default internal	resolutions:${wsxga}
