@@ -131,54 +131,54 @@ alias wqhd 2560x1440
 # standard layout for all apps on a 2560x1440 screen (or equiv)
 default thunderbolt resolutions:${wqhd}
 
-layout thunderbolt		${editor}		${w-50}
-layout thunderbolt		${evernote}		${w-50}
-layout thunderbolt		${intellij} 		${w-50}
-layout thunderbolt		${mail}			${w-50}
+layout thunderbolt		${editor}		              ${w-50}
+layout thunderbolt		${evernote}		            ${w-50}
+layout thunderbolt		${intellij} 		          ${w-50}
+layout thunderbolt		${mail}			              ${w-50}
 
-layout thunderbolt		${chrome}:REPEAT_LAST	${e-50}
-layout thunderbolt		${slack}   		${e-50}
-layout thunderbolt		${safari}:REPEAT_LAST	${e-50}
-layout thunderbolt		${terminal}:REPEAT_LAST	${e-50}
-#layout thunderbolt		${skype}    		${e-50}
+layout thunderbolt		${chrome}:REPEAT_LAST	    ${e-50}
+layout thunderbolt		${slack}   		            ${e-50}
+layout thunderbolt		${safari}:REPEAT_LAST	    ${e-50}
+layout thunderbolt		${terminal}:REPEAT_LAST	  ${e-50}
+#layout thunderbolt		${skype}    		           ${e-50}
 
-layout thunderbolt		${calendar}		${full}
-layout thunderbolt		${itunes}		${full}
+layout thunderbolt		${calendar}		            ${full}
+layout thunderbolt		${itunes}		              ${full}
 
 # thunderbolt layout for videoconferencing
-layout thunderbolt-vc		${zoom}			${n-66}
+layout thunderbolt-vc		${zoom}			            ${n-66}
 
-layout thunderbolt-vc		${editor}   		${sw-66}
-layout thunderbolt-vc		${evernote}		${sw-66}
-layout thunderbolt-vc		${intellij} 		${sw-66}
-layout thunderbolt-vc		${mail}			${sw-66}
+layout thunderbolt-vc		${editor}   		        ${sw-66}
+layout thunderbolt-vc		${evernote}		          ${sw-66}
+layout thunderbolt-vc		${intellij} 		        ${sw-66}
+layout thunderbolt-vc		${mail}			            ${sw-66}
 
-layout thunderbolt-vc		${chrome}:REPEAT_LAST	${se-66}
-layout thunderbolt-vc		${slack}   		${se-66}
+layout thunderbolt-vc		${chrome}:REPEAT_LAST	  ${se-66}
+layout thunderbolt-vc		${slack}   		          ${se-66}
 layout thunderbolt-vc		${safari}:REPEAT_LAST  	${se-66}
 layout thunderbolt-vc		${terminal}:REPEAT_LAST	${se-66}
-#layout thunderbolt-vc		${skype}    		${se-66}
+#layout thunderbolt-vc		${skype}    		      ${se-66}
 
 # dev layout
 
-layout dev  ${editor}             ${w-50}
-layout dev  ${safari}             ${ne-66}
-layout dev  ${terminal}           ${se-33}
-layout dev  ${chrome}:REPEAT_LAST	${ne-66}
+layout dev  ${editor}                           ${w-50}
+layout dev  ${safari}                           ${ne-66}
+layout dev  ${terminal}                         ${se-33}
+layout dev  ${chrome}:REPEAT_LAST	              ${ne-66}
 
 # standard layout for all apps on a 1680x1050 screen (or equiv)
 default internal	resolutions:${wsxga}
 
-layout internal		${editor}		${w-60}
-layout internal		${evernote}		${w-60}
-layout internal		${intellij} 		${w-60}
-layout internal		${mail}			${w-60}
+layout internal		${editor}		                  ${w-60}
+layout internal		${evernote}		                ${w-60}
+layout internal		${intellij} 		              ${w-60}
+layout internal		${mail}                       ${w-60}
 
-layout internal		${chrome}:REPEAT_LAST	${e-60}
-layout internal		${slack}   		${e-60}
-layout internal		${safari}:REPEAT_LAST	${e-60}
-layout internal		${terminal}:REPEAT_LAST	${e-60}
-#layout internal		${skype}    		${e-60}
+layout internal		${chrome}:REPEAT_LAST	        ${e-60}
+layout internal		${slack}   		                ${e-60}
+layout internal		${safari}:REPEAT_LAST	        ${e-60}
+layout internal		${terminal}:REPEAT_LAST	      ${e-60}
+#layout internal	 ${skype}     		             ${e-60}
 
 layout internal		${calendar}		${full}
 layout internal		${itunes}		${full}
