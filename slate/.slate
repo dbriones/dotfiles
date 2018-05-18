@@ -105,9 +105,6 @@ bind s:${modifiers} focus ${safari}
 alias slack 	       	'Slack'
 bind a:${modifiers} focus ${slack}
 
-alias skype	    	'Skype'
-bind y:${modifiers} focus ${skype}
-
 alias terminal	    	'iTerm2'
 bind t:${modifiers} focus ${terminal}
 
@@ -140,7 +137,6 @@ layout thunderbolt		${chrome}:REPEAT_LAST	    ${e-50}
 layout thunderbolt		${slack}   		            ${e-50}
 layout thunderbolt		${safari}:REPEAT_LAST	    ${e-50}
 layout thunderbolt		${terminal}:REPEAT_LAST	  ${e-50}
-#layout thunderbolt		${skype}    		           ${e-50}
 
 layout thunderbolt		${calendar}		            ${full}
 layout thunderbolt		${itunes}		              ${full}
@@ -157,7 +153,6 @@ layout thunderbolt-vc		${chrome}:REPEAT_LAST	  ${se-66}
 layout thunderbolt-vc		${slack}   		          ${se-66}
 layout thunderbolt-vc		${safari}:REPEAT_LAST  	${se-66}
 layout thunderbolt-vc		${terminal}:REPEAT_LAST	${se-66}
-#layout thunderbolt-vc		${skype}    		      ${se-66}
 
 # dev layout
 
@@ -178,7 +173,6 @@ layout internal		${chrome}:REPEAT_LAST	        ${e-60}
 layout internal		${slack}   		                ${e-60}
 layout internal		${safari}:REPEAT_LAST	        ${e-60}
 layout internal		${terminal}:REPEAT_LAST	      ${e-60}
-#layout internal	 ${skype}     		             ${e-60}
 
 layout internal		${calendar}		${full}
 layout internal		${itunes}		${full}
