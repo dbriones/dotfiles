@@ -75,6 +75,6 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 ffs () { eval 'sudo $(history | tail -2 | head -1 | cut -c8-)'; }
 
-alias fixcamera='sudo launchctl stop com.apple.cmio.VDCAssistant && sudo launchctl start com.apple.cmio.VDCAssistant && sudo launchctl stop com.apple.cmio.AppleCameraAssistant && sudo launchctl start com.apple.cmio.AppleCameraAssistant'
+alias fixcam='sudo launchctl stop com.apple.cmio.VDCAssistant && sudo launchctl start com.apple.cmio.VDCAssistant && sudo launchctl stop com.apple.cmio.AppleCameraAssistant && sudo launchctl start com.apple.cmio.AppleCameraAssistant'
 alias fixwifi='sudo ifconfig en0 down && sleep 2 && sudo ifconfig en0 up'
-alias fixcalagent='ps -ef | grep Executables/CalendarAgent | grep -v grep | awk "{ print \$2; }" | xargs kill'
+alias fixbt='sudo launchctl stop com.apple.blued && sudo launchctl start com.apple.blued'
