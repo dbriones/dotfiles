@@ -128,7 +128,7 @@ alias wqhd 2560x1440
 # standard layout for all apps on a 2560x1440 screen (or equiv)
 default thunderbolt resolutions:${wqhd}
 
-layout thunderbolt		${editor}		              ${w-50}
+layout thunderbolt		${editor}:REPEAT_LAST     ${w-50}
 layout thunderbolt		${evernote}		            ${w-50}
 layout thunderbolt		${intellij} 		          ${w-50}
 layout thunderbolt		${mail}			              ${w-50}
@@ -144,7 +144,7 @@ layout thunderbolt		${itunes}		              ${full}
 # thunderbolt layout for videoconferencing
 layout thunderbolt-vc		${zoom}			            ${n-66}
 
-layout thunderbolt-vc		${editor}   		        ${sw-66}
+layout thunderbolt-vc		${editor}:REPEAT_LAST   ${sw-66}
 layout thunderbolt-vc		${evernote}		          ${sw-66}
 layout thunderbolt-vc		${intellij} 		        ${sw-66}
 layout thunderbolt-vc		${mail}			            ${sw-66}
@@ -156,7 +156,7 @@ layout thunderbolt-vc		${terminal}:REPEAT_LAST	${se-66}
 
 # dev layout
 
-layout dev  ${editor}                           ${w-50}
+layout dev  ${editor}:REPEAT_LAST               ${w-50}
 layout dev  ${safari}                           ${ne-66}
 layout dev  ${terminal}                         ${se-33}
 layout dev  ${chrome}:REPEAT_LAST	              ${ne-66}
@@ -164,7 +164,7 @@ layout dev  ${chrome}:REPEAT_LAST	              ${ne-66}
 # standard layout for all apps on a 1680x1050 screen (or equiv)
 default internal	resolutions:${wsxga}
 
-layout internal		${editor}		                  ${w-60}
+layout internal		${editor}:REPEAT_LAST         ${w-60}
 layout internal		${evernote}		                ${w-60}
 layout internal		${intellij} 		              ${w-60}
 layout internal		${mail}                       ${w-60}
