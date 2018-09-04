@@ -1,15 +1,15 @@
 # Configs
 config defaultToCurrentScreen    true
-config nudgePercentOf         screenSize
-config resizePercentOf         screenSize
-config secondsBetweenRepeat     0.1
-config checkDefaultsOnLoad     true
+config nudgePercentOf            screenSize
+config resizePercentOf           screenSize
+config secondsBetweenRepeat      0.1
+config checkDefaultsOnLoad       true
 config focusCheckWidthMax        3000
 
 # window hints
-config windowHintsShowIcons        true
-config windowHintsSpread        true
-config windowHintsIgnoreHiddenWindows    false
+config windowHintsShowIcons           true
+config windowHintsSpread              true
+config windowHintsIgnoreHiddenWindows false
 
 # positioning grid
 #bind g:cmd grid padding:5 0:6,2 1:8,3
@@ -51,37 +51,37 @@ alias sz-y    screenSizeY
 alias so-x    screenOriginX
 alias so-y    screenOriginY
 
-alias full    move ${so-x};${so-y}                ${sz-x};${sz-y}
-alias nw-85    move ${so-x};${so-y}                ${sz-x}*.85;${sz-y}*.85
+alias full    move ${so-x};${so-y}                        ${sz-x};${sz-y}
+alias nw-85   move ${so-x};${so-y}                        ${sz-x}*.85;${sz-y}*.85
 
 # deprecated
-alias e-50    move ${so-x}+${sz-x}*.5;${so-y}            ${sz-x}*.5;${sz-y}
-alias e-60    move ${so-x}+${sz-x}*.4;${so-y}          ${sz-x}*.6;${sz-y}
-alias w-50    move ${so-x};${so-y}                          ${sz-x}*.5;${sz-y}
-alias w-60    move ${so-x};${so-y}                          ${sz-x}*.6;${sz-y}
+alias e-50  move ${so-x}+${sz-x}*.5;${so-y}               ${sz-x}*.5;${sz-y}
+alias e-60  move ${so-x}+${sz-x}*.4;${so-y}               ${sz-x}*.6;${sz-y}
+alias w-50  move ${so-x};${so-y}                          ${sz-x}*.5;${sz-y}
+alias w-60  move ${so-x};${so-y}                          ${sz-x}*.6;${sz-y}
 
 # Always 1280 pixels wide, regardless of screen size.
-alias w     move ${so-x};${so-y}                      1280;${sz-y}
-alias e     move ${sz-x}-1280;${so-y}                 1280;${sz-y}
+alias w     move ${so-x};${so-y}                          1280;${sz-y}
+alias e     move ${sz-x}-1280;${so-y}                     1280;${sz-y}
 
 alias nw-50 move ${so-x};${so-y}                          ${sz-x}*.5;${sz-y}*.5
-alias n-66  move ${so-x}+${sz-x}*.16;${so-y}        ${sz-x}*.66;${sz-y}*.33
-alias n-33    move ${so-x}+${sz-x}*.334;${so-y}        ${sz-x}*.334;${sz-y}*.5
+alias n-66  move ${so-x}+${sz-x}*.16;${so-y}              ${sz-x}*.66;${sz-y}*.33
+alias n-33  move ${so-x}+${sz-x}*.334;${so-y}             ${sz-x}*.334;${sz-y}*.5
 
-alias ne-50 move ${so-x}+${sz-x}*.5;${so-y}            ${sz-x}*.5;${sz-y}*.5
-alias ne-66 move ${so-x}+${sz-x}*.5;${so-y}           ${sz-x}*.5;${sz-y}*.666
+alias ne-50 move ${so-x}+${sz-x}*.5;${so-y}               ${sz-x}*.5;${sz-y}*.5
+alias ne-66 move ${so-x}+${sz-x}*.5;${so-y}               ${sz-x}*.5;${sz-y}*.666
 
-alias sw-50 move ${so-x};${so-y}+${sz-y}*.5            ${sz-x}*.5;${sz-y}*.5
-alias sw-66    move ${so-x};${so-y}+${sz-y}*.334        ${sz-x}*.5;${sz-y}*.666
+alias sw-50 move ${so-x};${so-y}+${sz-y}*.5               ${sz-x}*.5;${sz-y}*.5
+alias sw-66 move ${so-x};${so-y}+${sz-y}*.334             ${sz-x}*.5;${sz-y}*.666
 
 # Bump up 20px from bottom to account for Terminal's tab bar
-alias s-50    move ${so-x};${so-y}+${sz-y}*.5            ${sz-x};${sz-y}*.5
+alias s-50 move ${so-x};${so-y}+${sz-y}*.5                ${sz-x};${sz-y}*.5
 
-alias se-33 move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.667   ${sz-x}*.5;${sz-y}*.334
-alias se-50 move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.5        ${sz-x}*.5;${sz-y}*.5
-alias se-60    move ${so-x}+${sz-x}*.4;${so-y}+${sz-y}*.5    ${sz-x}*.6;${sz-y}*.5
-alias se-66    move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.334    ${sz-x}*.5;${sz-y}*.666
-alias se-85    move ${so-x}+${sz-x}*.15;${so-y}+${sz-y}*.15    ${sz-x}*.85;${sz-y}*.85
+alias se-33 move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.667  ${sz-x}*.5;${sz-y}*.334
+alias se-50 move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.5    ${sz-x}*.5;${sz-y}*.5
+alias se-60 move ${so-x}+${sz-x}*.4;${so-y}+${sz-y}*.5    ${sz-x}*.6;${sz-y}*.5
+alias se-66 move ${so-x}+${sz-x}*.5;${so-y}+${sz-y}*.334  ${sz-x}*.5;${sz-y}*.666
+alias se-85 move ${so-x}+${sz-x}*.15;${so-y}+${sz-y}*.15  ${sz-x}*.85;${sz-y}*.85
 
 # Location bindings
 bind u:${modifiers} ${nw-50}
@@ -96,19 +96,19 @@ bind m:${modifiers} ${sw-50}
 bind ,:${modifiers} ${s-50}
 bind .:${modifiers} ${se-50}
 
-alias calendar        'Calendar'
+alias calendar            'Calendar'
 bind c:${modifiers} focus ${calendar}
 
-alias editor            'Atom'
+alias editor              'Atom'
 bind e:${modifiers} focus ${editor}
 
 alias evernote            'Evernote'
 bind v:${modifiers} focus ${evernote}
 
-alias safari               'Safari'
+alias safari              'Safari'
 bind s:${modifiers} focus ${safari}
 
-alias slack                'Slack'
+alias slack               'Slack'
 bind a:${modifiers} focus ${slack}
 
 alias terminal            'iTerm2'
@@ -117,15 +117,15 @@ bind t:${modifiers} focus ${terminal}
 alias intellij            'IntelliJ IDEA'
 bind n:${modifiers} focus ${intellij}
 
-alias itunes        'iTunes'
+alias itunes              'iTunes'
 
-alias mail              'Mail'
+alias mail                'Mail'
 bind h:${modifiers} focus ${mail}
 
-alias chrome            'Google Chrome'
+alias chrome              'Google Chrome'
 bind r:${modifiers} focus ${chrome}
 
-alias zoom              'zoom.us'
+alias zoom                'zoom.us'
 
 # (equivalent) resolutions
 alias wsxga 1680x1050
@@ -134,54 +134,54 @@ alias wqhd 2560x1440
 # standard layout for all apps on a 2560x1440 screen (or equiv)
 default thunderbolt resolutions:${wqhd}
 
-layout thunderbolt        ${editor}:REPEAT_LAST     ${w}
-layout thunderbolt        ${evernote}                    ${w}
-layout thunderbolt        ${intellij}                   ${w}
-layout thunderbolt        ${mail}                          ${w}
+layout thunderbolt        ${editor}:REPEAT_LAST    ${w}
+layout thunderbolt        ${evernote}              ${w}
+layout thunderbolt        ${intellij}              ${w}
+layout thunderbolt        ${mail}                  ${w}
 
-layout thunderbolt        ${chrome}:REPEAT_LAST        ${e}
-layout thunderbolt        ${slack}                       ${e}
-layout thunderbolt        ${safari}:REPEAT_LAST        ${e}
-layout thunderbolt        ${terminal}:REPEAT_LAST      ${e}
+layout thunderbolt        ${chrome}:REPEAT_LAST    ${e}
+layout thunderbolt        ${slack}                 ${e}
+layout thunderbolt        ${safari}:REPEAT_LAST    ${e}
+layout thunderbolt        ${terminal}:REPEAT_LAST  ${e}
 
-layout thunderbolt        ${calendar}                    ${full}
-layout thunderbolt        ${itunes}                      ${full}
+layout thunderbolt        ${calendar}              ${full}
+layout thunderbolt        ${itunes}                ${full}
 
 # thunderbolt layout for videoconferencing
-layout thunderbolt-vc        ${zoom}                        ${n-66}
+layout thunderbolt-vc     ${zoom}                  ${n-66}
 
-layout thunderbolt-vc        ${editor}:REPEAT_LAST   ${sw-66}
-layout thunderbolt-vc        ${evernote}                  ${sw-66}
-layout thunderbolt-vc        ${intellij}                 ${sw-66}
-layout thunderbolt-vc        ${mail}                        ${sw-66}
+layout thunderbolt-vc     ${editor}:REPEAT_LAST    ${sw-66}
+layout thunderbolt-vc     ${evernote}              ${sw-66}
+layout thunderbolt-vc     ${intellij}              ${sw-66}
+layout thunderbolt-vc     ${mail}                  ${sw-66}
 
-layout thunderbolt-vc        ${chrome}:REPEAT_LAST      ${se-66}
-layout thunderbolt-vc        ${slack}                     ${se-66}
-layout thunderbolt-vc        ${safari}:REPEAT_LAST      ${se-66}
-layout thunderbolt-vc        ${terminal}:REPEAT_LAST    ${se-66}
+layout thunderbolt-vc     ${chrome}:REPEAT_LAST    ${se-66}
+layout thunderbolt-vc     ${slack}                 ${se-66}
+layout thunderbolt-vc     ${safari}:REPEAT_LAST    ${se-66}
+layout thunderbolt-vc     ${terminal}:REPEAT_LAST  ${se-66}
 
 # dev layout
 
-layout dev  ${editor}:REPEAT_LAST               ${w}
-layout dev  ${safari}                           ${ne-66}
-layout dev  ${terminal}                         ${se-33}
-layout dev  ${chrome}:REPEAT_LAST                  ${ne-66}
+layout dev                ${editor}:REPEAT_LAST    ${w}
+layout dev                ${safari}                ${ne-66}
+layout dev                ${terminal}              ${se-33}
+layout dev                ${chrome}:REPEAT_LAST    ${ne-66}
 
 # standard layout for all apps on a 1680x1050 screen (or equiv)
 default internal    resolutions:${wsxga}
 
-layout internal        ${editor}:REPEAT_LAST         ${w}
-layout internal        ${evernote}                        ${w}
-layout internal        ${intellij}                       ${w}
-layout internal        ${mail}                       ${w}
+layout internal           ${editor}:REPEAT_LAST    ${w}
+layout internal           ${evernote}              ${w}
+layout internal           ${intellij}              ${w}
+layout internal           ${mail}                  ${w}
 
-layout internal        ${chrome}:REPEAT_LAST            ${e}
-layout internal        ${slack}                           ${e}
-layout internal        ${safari}:REPEAT_LAST            ${e}
-layout internal        ${terminal}:REPEAT_LAST          ${e}
+layout internal           ${chrome}:REPEAT_LAST    ${e}
+layout internal           ${slack}                 ${e}
+layout internal           ${safari}:REPEAT_LAST    ${e}
+layout internal           ${terminal}:REPEAT_LAST  ${e}
 
-layout internal        ${calendar}        ${full}
-layout internal        ${itunes}        ${full}
+layout internal           ${calendar}              ${full}
+layout internal           ${itunes}                ${full}
 
 bind 0:${modifiers}    relaunch
 bind 1:${modifiers}    layout        thunderbolt
