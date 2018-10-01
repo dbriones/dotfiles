@@ -77,4 +77,6 @@ ffs () { eval 'sudo $(history | tail -2 | head -1 | cut -c8-)'; }
 
 alias fixcam='sudo launchctl stop com.apple.cmio.VDCAssistant && sudo launchctl start com.apple.cmio.VDCAssistant && sudo launchctl stop com.apple.cmio.AppleCameraAssistant && sudo launchctl start com.apple.cmio.AppleCameraAssistant'
 alias fixwifi='sudo ifconfig en0 down && sleep 2 && sudo ifconfig en0 up'
-alias fixbt='sudo launchctl stop com.apple.blued && sudo launchctl start com.apple.blued'
+alias fixbt='sudo killall blued && sleep 3 && sudo launchctl start com.apple.blued'
+
+alias hugo="${HOME}/dev/hugo/hugo_0.46_macOS-64bit/hugo_0.46_macOS-64bit"
