@@ -86,11 +86,10 @@ prompt_color_git() {
   if [ -f ${HOME}/.bash.d/git_completion.bash ]
   then
     . ${HOME}/.bash.d/git_completion.bash;
-    PS1="\[${BOLD_GREEN}\]\n\W"          # basename of pwd
+    PS1="\[${BOLD_GREEN}\]\W"       # basename of pwd
     PS1+="\[\$(git_color)\]"        # colors git status
     PS1+="\$(git_branch)"           # prints current branch
-    PS1+=" \[${NORM_GREY}\]\$\[${PS_CLEAR}\] "   # '#' for root, else '$'
-    #PS1=" ${BOLD_GREEN}\h${BOLD_CYAN} \W${BOLD_YELLOW}\$(__git_ps1)${PS_CLEAR} ${P} "
+    PS1+=" \[${PS_CLEAR}\]${P} "
     PS2=" ${NORM_RED}continue ${PS_CLEAR}> "
   fi
 }
