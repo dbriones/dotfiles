@@ -3,25 +3,27 @@
 
 # taken from https://github.com/square/dotfiles.git
 
-NORM_RED="\[\e[0;31m\]"
-NORM_BROWN="\[\e[0;33m\]"
-NORM_GREY="\[\e[0;97m\]"
-NORM_BLUE="\[\e[0;34m\]"
+NORM_RED="\033[0;31m"
+NORM_GREEN="\033[0;32m"
+NORM_YELLOW="\033[0;33m"
+NORM_BLUE="\033[0;34m"
+NORM_WHITE="\033[0;37m"
+NORM_GREY="\033[0;97m"
 
-BOLD_CYAN="\[\e[01;36m\]"
-BOLD_GREEN="\[\e[01;32m\]"
-BOLD_YELLOW="\[\e[01;33m\]"
+BOLD_CYAN="\033[01;36m"
+BOLD_GREEN="\033[01;32m"
+BOLD_YELLOW="\033[01;33m"
 
-PS_CLEAR="\[\e[0m\]"
-SCREEN_ESC="\[\ek\e\134\]"
+PS_CLEAR="\033[0m"
+SCREEN_ESC="\033k\e\134\]"
 
 if [ "$LOGNAME" = "root" ]; then
     COLOR1="${NORM_RED}"
-    COLOR2="${NORM_BROWN}"
+    COLOR2="${NORM_YELLOW}"
     P="#"
 else
     COLOR1="${NORM_BLUE}"
-    COLOR2="${NORM_BROWN}"
+    COLOR2="${NORM_YELLOW}"
     P="\$"
 fi
 
@@ -52,12 +54,43 @@ prompt_color() {
 # brew install git
 # brew update
 
+function git_color {
+  local git_status="$(git status 2> /dev/null)"
+
+  if [[ ! $git_status =~ "working tree clean" ]]; then
+    echo -e ${NORM_RED}
+  elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+    echo -e ${NORM_YELLOW}
+  elif [[ $git_status =~ "nothing to commit" ]]; then
+    echo -e ${NORM_GREEN}
+  else
+    echo -e ""
+  fi
+}
+
+function git_branch {
+  local git_status="$(git status 2> /dev/null)"
+  local on_branch="On branch ([^${IFS}]*)"
+  local on_commit="HEAD detached at ([^${IFS}]*)"
+
+  if [[ $git_status =~ $on_branch ]]; then
+    local branch=${BASH_REMATCH[1]}
+    echo ":$branch"
+  elif [[ $git_status =~ $on_commit ]]; then
+    local commit=${BASH_REMATCH[1]}
+    echo ":$commit"
+  fi
+}
 
 prompt_color_git() {
-  if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]
+  if [ -f ${HOME}/.bash.d/git_completion.bash ]
   then
-    . /usr/local/etc/bash_completion.d/git-completion.bash;
-    PS1=" ${BOLD_GREEN}\h${BOLD_CYAN} \W${BOLD_YELLOW}\$(__git_ps1)${PS_CLEAR} ${P} "
+    . ${HOME}/.bash.d/git_completion.bash;
+    PS1="\[${BOLD_GREEN}\]\n\W"          # basename of pwd
+    PS1+="\[\$(git_color)\]"        # colors git status
+    PS1+="\$(git_branch)"           # prints current branch
+    PS1+=" \[${NORM_GREY}\]\$\[${PS_CLEAR}\] "   # '#' for root, else '$'
+    #PS1=" ${BOLD_GREEN}\h${BOLD_CYAN} \W${BOLD_YELLOW}\$(__git_ps1)${PS_CLEAR} ${P} "
     PS2=" ${NORM_RED}continue ${PS_CLEAR}> "
   fi
 }
