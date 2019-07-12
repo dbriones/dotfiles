@@ -11,6 +11,7 @@ alias w="cd ~/workspace"
 alias g="git"
 alias h="history"
 alias o="open"
+alias @="atom"
 
 # Docker
 alias d=docker
