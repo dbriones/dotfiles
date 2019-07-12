@@ -81,3 +81,7 @@ alias fixwifi='sudo ifconfig en0 down && sleep 2 && sudo ifconfig en0 up'
 alias fixbt='sudo killall blued && sleep 3 && sudo launchctl start com.apple.blued'
 
 alias hugo="${HOME}/dev/hugo/hugo_0.46_macOS-64bit/hugo_0.46_macOS-64bit"
+
+alias @notes="atom ${HOME}/Documents/notes"
+alias @dotfiles="atom ${HOME}/dotfiles"
+
