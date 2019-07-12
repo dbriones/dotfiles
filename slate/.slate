@@ -144,8 +144,8 @@ layout thunderbolt        ${slack}                 ${e}
 layout thunderbolt        ${safari}:REPEAT_LAST    ${e}
 layout thunderbolt        ${terminal}:REPEAT_LAST  ${e}
 
-layout thunderbolt        ${calendar}              ${full}
-layout thunderbolt        ${itunes}                ${full}
+layout thunderbolt        ${calendar}              ${e}
+layout thunderbolt        ${itunes}                ${w}
 
 # thunderbolt layout for videoconferencing
 layout thunderbolt-vc     ${zoom}                  ${n-66}
@@ -180,8 +180,8 @@ layout internal           ${slack}                 ${e}
 layout internal           ${safari}:REPEAT_LAST    ${e}
 layout internal           ${terminal}:REPEAT_LAST  ${e}
 
-layout internal           ${calendar}              ${full}
-layout internal           ${itunes}                ${full}
+layout internal           ${calendar}              ${e}
+layout internal           ${itunes}                ${w}
 
 bind 0:${modifiers}    relaunch
 bind 1:${modifiers}    layout        thunderbolt
