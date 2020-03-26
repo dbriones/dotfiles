@@ -54,12 +54,6 @@ alias so-y    screenOriginY
 alias full    move ${so-x};${so-y}                        ${sz-x};${sz-y}
 alias nw-85   move ${so-x};${so-y}                        ${sz-x}*.85;${sz-y}*.85
 
-# deprecated
-alias e-50  move ${so-x}+${sz-x}*.5;${so-y}               ${sz-x}*.5;${sz-y}
-alias e-60  move ${so-x}+${sz-x}*.4;${so-y}               ${sz-x}*.6;${sz-y}
-alias w-50  move ${so-x};${so-y}                          ${sz-x}*.5;${sz-y}
-alias w-60  move ${so-x};${so-y}                          ${sz-x}*.6;${sz-y}
-
 # Always 1280 pixels wide, regardless of screen size.
 alias w     corner top-left  resize:1280;${sz-y}
 alias e     corner top-right resize:1280;${sz-y} 
