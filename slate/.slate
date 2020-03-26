@@ -61,8 +61,8 @@ alias w-50  move ${so-x};${so-y}                          ${sz-x}*.5;${sz-y}
 alias w-60  move ${so-x};${so-y}                          ${sz-x}*.6;${sz-y}
 
 # Always 1280 pixels wide, regardless of screen size.
-alias w     move ${so-x};${so-y}                          1280;${sz-y}
-alias e     move ${sz-x}-1280;${so-y}                     1280;${sz-y}
+alias w     corner top-left  resize:1280;${sz-y}
+alias e     corner top-right resize:1280;${sz-y} 
 
 alias nw-50 move ${so-x};${so-y}                          ${sz-x}*.5;${sz-y}*.5
 alias n-66  move ${so-x}+${sz-x}*.16;${so-y}              ${sz-x}*.66;${sz-y}*.33
