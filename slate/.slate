@@ -52,6 +52,8 @@ alias so-x    screenOriginX
 alias so-y    screenOriginY
 
 alias full    move ${so-x};${so-y}                        ${sz-x};${sz-y}
+alias center  move ${sz-x}*.25;${so-y}                    ${sz-x}*.5;${sz-y}
+
 alias nw-85   move ${so-x};${so-y}                        ${sz-x}*.85;${sz-y}*.85
 
 # Always 1280 pixels wide, regardless of screen size.
@@ -89,6 +91,8 @@ bind l:${modifiers} ${e}
 bind m:${modifiers} ${sw-50}
 bind ,:${modifiers} ${s-50}
 bind .:${modifiers} ${se-50}
+
+bind 8:${modifiers} ${center}
 
 alias calendar            'Calendar'
 bind c:${modifiers} focus ${calendar}
