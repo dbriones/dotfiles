@@ -115,7 +115,7 @@ bind t:${modifiers} focus ${terminal}
 alias intellij            'IntelliJ IDEA'
 bind n:${modifiers} focus ${intellij}
 
-alias itunes              'iTunes'
+alias music               'Music'
 
 alias mail                'Mail'
 bind h:${modifiers} focus ${mail}
@@ -143,7 +143,7 @@ layout thunderbolt        ${safari}:REPEAT_LAST    ${e}
 layout thunderbolt        ${terminal}:REPEAT_LAST  ${e}
 
 layout thunderbolt        ${calendar}              ${e}
-layout thunderbolt        ${itunes}                ${w}
+layout thunderbolt        ${music}                 ${w}
 
 # thunderbolt layout for videoconferencing
 layout thunderbolt-vc     ${zoom}                  ${n-66}
@@ -179,7 +179,7 @@ layout internal           ${safari}:REPEAT_LAST    ${e}
 layout internal           ${terminal}:REPEAT_LAST  ${e}
 
 layout internal           ${calendar}              ${e}
-layout internal           ${itunes}                ${w}
+layout internal           ${music}                 ${w}
 
 bind 0:${modifiers}    relaunch
 bind 1:${modifiers}    layout        thunderbolt
