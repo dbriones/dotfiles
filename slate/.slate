@@ -19,8 +19,8 @@ alias modifiers ctrl;alt;cmd
 alias modifiers- ctrl;alt;cmd;shift
 
 # Throw
-bind ]:${modifiers} throw right resize full
-bind [:${modifiers}  throw left resize full
+bind ]:${modifiers} throw right 
+bind [:${modifiers} throw left 
 
 # Grow
 bind right:${modifiers}  resize +5% 0
