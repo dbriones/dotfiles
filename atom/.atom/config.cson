@@ -1,0 +1,73 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "32dc78c8-7f42-4bc3-a69b-15dec3243875"
+    java:
+      disabled: true
+    json:
+      jslint_happy: true
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+    fileBlacklist: [
+      "*.md"
+    ]
+  autosave:
+    enabled: true
+  core:
+    disabledPackages: [
+      "diagrams"
+      "linter"
+      "linter-ui-default"
+    ]
+    packagesWithKeymapsDisabled: [
+      "ink"
+    ]
+    projectHome: "/Users/dante/dev"
+    telemetryConsent: "limited"
+  diagrams:
+    previewWidth: 934
+  editor:
+    autoIndent: false
+    fontFamily: "Monaco, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    fontSize: 12
+    showIndentGuide: true
+    showInvisibles: true
+    zoomFontWhenCtrlScrolling: true
+  "exception-reporting":
+    userId: "1b92db36-4a52-4933-81cf-b35f9ae6f2a8"
+  "linter-ui-default":
+    showPanel: true
+  "lisp-paredit":
+    strict: false
+  parinfer:
+    "file-extensions": [
+      ".clj"
+      ".cljs"
+      ".cljc"
+      ".edn"
+      ".boot"
+      ".lfe"
+      ".rkt"
+      ".scm"
+      ".lisp"
+      ".lsp"
+      ".cl"
+      ".el"
+      ".joke"
+    ]
+  "proto-repl":
+    autoPrettyPrint: true
+    autoScroll: false
+    leinArgs: "with-profile +dev repl :headless"
+    leinPath: "/usr/local/bin/lein"
+    openReplInRightPane: false
+  script:
+    cwdBehavior: "Directory of the script"
+  "spell-check": {}
+  "svg-preview":
+    openPreviewInPane: ""
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    removeTrailingWhitespace: false
