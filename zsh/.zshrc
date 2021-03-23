@@ -109,6 +109,9 @@ alias openpb='open $(pbpaste)'
 # Atom
 alias @="atom"
 
+alias @dotfiles="@ $HOME/dotfiles"
+
+
 # Git
 alias gpuo="git push -u origin $(git_current_branch)"
 
