@@ -16,3 +16,5 @@
 	default = tracking
 [branch]
 	autosetuprebase = always
+[advice]
+	detachedHead = false
