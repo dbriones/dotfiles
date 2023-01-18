@@ -20,6 +20,10 @@ alias dpsa='docker ps -a'
 # Kubernetes
 alias mk=minikube
 alias kc=kubectl
+alias kgn='kubectl get nodes'
+alias kgp='kubectl get pods'
+alias kdn='kubectl describe nodes'
+alias kdp='kubectl describe pods'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
