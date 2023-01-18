@@ -100,7 +100,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Python
 export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
 alias venv="python3 -m venv venv; source venv/bin/activate; pip install -r requirements.txt"
 
 # Pasteboard
@@ -111,9 +110,16 @@ alias @="atom"
 
 alias @dotfiles="@ $HOME/dotfiles"
 
+# kubectl
+alias kc=kubectl
+alias kgn='kubectl get nodes'
+alias kgp='kubectl get pods'
+alias kdn='kubectl describe nodes'
+alias kdp='kubectl describe pods'
+alias klf='kubectl logs -f'
 
 # Git
-alias gpuo="git push -u origin $(git_current_branch)"
+alias gpuo='git push -u origin head'
 
 # Internal shell config
 for file in ~/.zsh-internal.d/*; do
@@ -121,4 +127,7 @@ for file in ~/.zsh-internal.d/*; do
 done
 unset file
 
-
+# Golang config
+export GOHOME=~/go
+export GOBIN=${GOHOME}/bin
+export PATH="$PATH:$GOBIN"
