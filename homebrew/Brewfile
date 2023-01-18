@@ -1,0 +1,6 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core", "https://github.pie.apple.com/homebrew/homebrew-core.git"
+brew "stow"
+cask "atom"
+cask "iterm2"
