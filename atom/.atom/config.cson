@@ -24,12 +24,17 @@
     ]
     projectHome: "/Users/dante/dev"
     telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
   diagrams:
     previewWidth: 934
   editor:
     autoIndent: false
     fontFamily: "Monaco, Menlo, Consolas, DejaVu Sans Mono, monospace"
-    fontSize: 12
+    fontSize: 11
+    preferredLineLength: 120
     showIndentGuide: true
     showInvisibles: true
     zoomFontWhenCtrlScrolling: true
@@ -71,3 +76,10 @@
   whitespace:
     ensureSingleTrailingNewline: false
     removeTrailingWhitespace: false
+".shell-session.text":
+  editor:
+    autoIndent: true
+".shell.source":
+  editor:
+    autoIndent: true
+    tabLength: 4
