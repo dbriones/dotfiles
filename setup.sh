@@ -70,7 +70,7 @@ install_packages() {
 }
 
 # ── 4. Dotfiles ───────────────────────────────────────────────────────────────
-setup_dotfiles() {
+clone_dotfiles() {
   if [[ -d "$DOTFILES_DIR" ]]; then
     info "Dotfiles repo already cloned; pulling latest..."
     git -C "$DOTFILES_DIR" pull --rebase --quiet
@@ -79,7 +79,9 @@ setup_dotfiles() {
     git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
   fi
   success "Dotfiles repo ready at $DOTFILES_DIR"
+}
 
+setup_dotfiles() {
   # Symlink files using GNU Stow.
   # Assumes DOTFILES_DIR contains subdirectories mirroring $HOME structure,
   # e.g. dotfiles/zsh/.zshrc → $HOME/.zshrc
@@ -218,6 +220,7 @@ main() {
 
   install_xcode_clt
   install_homebrew
+  clone_dotfiles
   install_packages
   setup_dotfiles
   setup_shell
