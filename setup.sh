@@ -71,8 +71,12 @@ install_packages() {
 # ── 4. Dotfiles ───────────────────────────────────────────────────────────────
 clone_dotfiles() {
   if [[ -d "$DOTFILES_DIR" ]]; then
-    info "Dotfiles repo already cloned; pulling latest..."
-    git -C "$DOTFILES_DIR" pull --rebase --quiet
+      if [[ "${1:-}" == "--no-pull" ]]; then
+        info "Skipping pull of latest dotfiles"
+      else
+        info "Dotfiles repo already cloned; pulling latest..."
+        git -C "$DOTFILES_DIR" pull --rebase --quiet
+      fi
   else
     info "Cloning dotfiles repo..."
     git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
@@ -219,15 +223,15 @@ main() {
 
   install_xcode_clt
   install_homebrew
-  clone_dotfiles
+  clone_dotfiles "$@"
   install_packages
   setup_dotfiles
   setup_shell
 
-  if [[ "${1:-}" != "--no-macos-defaults" ]]; then
-    set_macos_defaults
-  else
+  if [[ "${1:-}" == "--no-macos-defaults" ]]; then
     info "Skipping macOS defaults (--no-macos-defaults passed)"
+  else
+    set_macos_defaults
   fi
 
   echo ""
