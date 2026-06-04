@@ -64,8 +64,7 @@ install_packages() {
   fi
 
   info "Installing packages from Brewfile..."
-  # --no-lock skips writing Brewfile.lock.json (handy if you track the repo read-only)
-  brew bundle install --file="$brewfile" --no-lock
+  brew bundle -v install --file="$brewfile"
   success "Packages installed"
 }
 
