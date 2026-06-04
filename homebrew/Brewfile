@@ -1,4 +1,4 @@
 tap "homebrew/bundle"
 brew "stow"
-cask "atom"
 cask "iterm2"
+cask "stats"
