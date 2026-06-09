@@ -225,6 +225,8 @@ main() {
   install_homebrew
   clone_dotfiles "$@"
   install_packages
+  # install_mac_apps
+  # install magnet
   setup_dotfiles
   setup_shell
 
